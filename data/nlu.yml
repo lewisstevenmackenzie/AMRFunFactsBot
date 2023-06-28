@@ -1,0 +1,47 @@
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hey!
+      - Hello
+      - Good day
+      - Good morning
+
+  - intent: confirm
+    examples: |
+      - yes
+      - please
+      - defintely 
+      - that sounds great
+      - lets do it 
+      - sure
+      - okay
+      - i would like to
+
+  - intent: deny
+    examples: |
+      - no
+      - i'd rather not
+      - i don't want to 
+      - defintely not
+      - that doesnt sound lke something i'm interested in 
+      - no thank you
+
+  - intent: moreFacts
+    examples: |
+      - can you tell me another fact?
+      - please tell me more about Antibiotics
+      - can you hit me with a fact
+      - i'd like another fact
+      - tell me a fact.
+
+  - intent: bye
+    examples: |
+      - bye
+      - cya
+      - i think i want to stop
+      - i don't want to learn anything more
+      - i'm doesnt
+      - can we stop now
+      - let's stop
+      - i want to Go

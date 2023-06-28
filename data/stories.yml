@@ -1,0 +1,47 @@
+stories:
+  - story: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: deny learning fact at the start
+    steps:
+      - action: utter_greet
+      - intent: deny
+      - action: utter_end_chat
+
+  - story: deny learning another fact
+    steps:
+      - action: utter_another_question
+      - intent: deny
+      - action: utter_end_chat
+
+  - story: accept learning fact at the start
+    steps:
+      - action: utter_greet
+      - intent: confirm
+      - action: action_utter_fact
+
+  - story: accept learning fact at the start and learn more about that fact
+    steps:
+      - action: utter_greet
+      - intent: confirm
+      - action: action_utter_fact
+      - intent: confirm
+      - action: action_utter_fact
+
+  - story: learn more about that fact
+    steps:
+      - action: action_utter_fact
+      - intent: confirm
+      - action: action_utter_fact
+
+  - story: user asks for a different fact
+    steps:
+      - intent: moreFacts
+      - action: action_utter_fact
+
+  - story: user want to end the chat
+    steps:
+      - intent: bye
+      - action: utter_end_chat
