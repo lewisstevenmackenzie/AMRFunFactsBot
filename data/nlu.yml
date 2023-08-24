@@ -5,7 +5,7 @@ nlu:
       - Hey!
       - Hello
       - Good day
-      - Good morning
+      - Good morningp
 
   - intent: confirm
     examples: |
@@ -45,3 +45,34 @@ nlu:
       - can we stop now
       - let's stop
       - i want to Go
+
+  - intent: wantAntibiotics
+    examples: |
+      - i want Antibiotics
+      - i need Antibiotics
+      - i require Antibiotics
+      - i want medication
+      - i'm feeling ill and need Antibiotics to help me feel better
+
+  - intent: queryAntibioiticDuration
+    examples: |
+      - i've been prescribed ibuprofen. when should i take them?
+      - how long should i take antbiotics for?
+      - can you tell me when i should be taking the antbioitcs that i was prescibed?
+
+  - intent: whenToUseAntibiotics
+    examples: |
+      - why do you prescribe Antibiotics?
+      - what reason would i have to take antbioitcs
+      - what are antbioitcs for
+      - are there any reasons why i've been prescribed Antibiotics
+
+  - intent: alternativeMedication
+    examples: |
+      - what should i take instead of antibiotcs?
+      - are there any alternative medications that i can take?
+
+  - intent: querySideEffects
+    examples: |
+      - are there any side effects?
+      - side affects?

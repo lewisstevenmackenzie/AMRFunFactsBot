@@ -12,9 +12,15 @@ stories:
 
   - story: deny learning another fact
     steps:
-      - action: utter_another_question
+      - action: action_another_question
       - intent: deny
       - action: utter_end_chat
+
+  - story: accept learning another fact
+    steps:
+      - action: action_another_question
+      - intent: confirm
+      - action: action_utter_fact
 
   - story: accept learning fact at the start
     steps:
@@ -27,14 +33,37 @@ stories:
       - action: utter_greet
       - intent: confirm
       - action: action_utter_fact
+      - action: action_followUp_question
       - intent: confirm
       - action: action_utter_fact
 
   - story: learn more about that fact
     steps:
       - action: action_utter_fact
+      - action: action_followUp_question
       - intent: confirm
       - action: action_utter_fact
+
+  - story: don't learn more about that fact
+    steps:
+      - action: action_utter_fact
+      - action: action_followUp_question
+      - intent: deny
+      - action: action_another_question
+
+  - story: learn more about a different fact
+    steps:
+      - action: action_utter_fact
+      - action: action_noFollowUp_question
+      - intent: confirm
+      - action: action_utter_fact
+
+  - story: don't learn more about any other fact fact
+    steps:
+      - action: action_utter_fact
+      - action: action_noFollowUp_question
+      - intent: deny
+      - action: utter_end_chat
 
   - story: user asks for a different fact
     steps:
@@ -45,3 +74,28 @@ stories:
     steps:
       - intent: bye
       - action: utter_end_chat
+
+  - story: user requests Antibiotics
+    steps:
+      - intent: wantAntibiotics
+      - action: action_warn_antibiotic_use
+
+  - story: querying how long to take antbiotics
+    steps:
+      - intent: queryAntibioiticDuration
+      - action: action_follow_doctors_instructions
+
+  - story: querying when to use antibiotics
+    steps:
+      - intent: whenToUseAntibiotics
+      - action: action_antibiotic_use
+
+  - story: query alternative medications
+    steps:
+      - intent: alternativeMedication
+      - action: action_antibiotic_alternatives
+
+  - story: query the side effect of medication
+    steps:
+      - intent: querySideEffects
+      - action: action_antibiotic_sideaffects
