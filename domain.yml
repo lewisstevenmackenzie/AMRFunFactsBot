@@ -15,7 +15,7 @@ intents:
   - querySideEffects
   - action_antibiotic_sideaffects
   - presciptionUse
-  - antibiotcTypes
+  - antibioticTypes
   - featuresEnquiry
 slots:
   factsAsked:
@@ -37,7 +37,7 @@ responses:
 
   utter_end_chat:
     - text: |
-        okay, no worries. If you want to ask anything else then please feel free to do so. You can ask questions such as when to take antbiotics, types of antbiotics etc.
+        okay, no worries. If you want to ask anything else then please feel free to do so. You can ask questions such as when to take antibiotics, types of antibiotics etc.
 
   utter_another_question:
     - text: |

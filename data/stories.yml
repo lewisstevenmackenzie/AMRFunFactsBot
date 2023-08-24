@@ -107,7 +107,7 @@ stories:
 
   - story:
     steps:
-      - intent: antibiotcTypes
+      - intent: antibioticTypes
       - action: utter_antibiotic_types
 
   - story:

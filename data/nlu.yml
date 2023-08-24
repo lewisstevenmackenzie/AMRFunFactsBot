@@ -82,7 +82,7 @@ nlu:
       - how often should i be taking antibiotics?
       - what is the recommended dose?
 
-  - intent: antibiotcTypes
+  - intent: antibioticTypes
     examples: |
       - are there different types of antibiotics?
       - what types of antibiotics are there?
