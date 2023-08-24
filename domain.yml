@@ -8,8 +8,22 @@ intents:
   - deny
   - moreFacts
   - bye
+  - wantAntibiotics
+  - queryAntibioiticDuration
+  - whenToUseAntibiotics
+  - alternativeMedication
+  - querySideEffects
+  - action_antibiotic_sideaffects
 slots:
-  email:
+  factsAsked:
+    type: text
+    influence_conversation: false
+    mappings: []
+  moreInfo:
+    type: text
+    influence_conversation: false
+    mappings: []
+  warnAntibiotics:
     type: text
     influence_conversation: false
     mappings: []
@@ -32,4 +46,12 @@ actions:
   - utter_end_chat
   - utter_another_question
   - action_utter_fact
-forms:
+  - action_followUp_question
+  - action_noFollowUp_question
+  - action_denyFollowUp_question
+  - action_another_question
+  - action_warn_antibiotic_use
+  - action_antibiotic_use
+  - action_follow_doctors_instructions
+  - action_antibiotic_alternatives
+  - action_antibiotic_sideaffects
