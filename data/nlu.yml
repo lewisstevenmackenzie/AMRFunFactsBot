@@ -76,3 +76,23 @@ nlu:
     examples: |
       - are there any side effects?
       - side affects?
+
+  - intent: presciptionUse
+    examples: |
+      - how often should i be taking antibiotics?
+      - what is the recommended dose?
+
+  - intent: antibiotcTypes
+    examples: |
+      - are there different types of antibiotics?
+      - what types of antibiotics are there?
+      - waht kinds of antibioitcs are there?
+      - is there only one type of antibioitic?
+      - do antbioitics all work the same?
+      - can you tell me about the different antibiotics?
+
+  - intent: featuresEnquiry
+    examples: |
+      - what features can you do
+      - what can i ask you?
+      - what can you do.

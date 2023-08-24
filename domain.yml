@@ -14,6 +14,9 @@ intents:
   - alternativeMedication
   - querySideEffects
   - action_antibiotic_sideaffects
+  - presciptionUse
+  - antibiotcTypes
+  - featuresEnquiry
 slots:
   factsAsked:
     type: text
@@ -34,17 +37,32 @@ responses:
 
   utter_end_chat:
     - text: |
-        okay, no worries. If you want to ask anything else then please feel free to do so.
+        okay, no worries. If you want to ask anything else then please feel free to do so. You can ask questions such as when to take antbiotics, types of antbiotics etc.
 
   utter_another_question:
     - text: |
         would you like to learn about another fact?
+
+  utter_antibiotic_types:
+    - text: |
+        There are 6 main types of antibiotics, these are as follows: Penicillins, Cephalosporins, Aminoglycosides, Tetracyclines, Macrolides and Fluoroquinolones. If you would like to find out more about these then you can find further information here: https://www.nhs.uk/conditions/antibiotics/
+
+  utter_features:
+    - text: |
+        You can ask me to tell you a fun fact or i can inform you about side effects, frequency of dosage or reasons why a doctor may have chosen not to prescribe antibioitcs.
+
+  utter_out_of_scope:
+    - text: |
+        I'm Sorry, I don't know how to assist you with this issue. Perhaps you can find the answer you're looking for here: https://www.nhs.uk/conditions/antibiotics/
 
 actions:
   - "..."
   - utter_greet
   - utter_end_chat
   - utter_another_question
+  - utter_out_of_scope
+  - utter_antibiotic_types
+  - utter_features
   - action_utter_fact
   - action_followUp_question
   - action_noFollowUp_question

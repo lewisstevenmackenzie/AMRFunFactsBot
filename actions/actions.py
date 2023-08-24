@@ -253,13 +253,13 @@ class ActionWarnAntibioticUse(Action):
 
         if AntibioticWarning is None:
 
-            msg = "INSERT WARNING MESSAGE HERE LATER"
+            msg = "Before being prescribed antibiotics from a GP it is vital that you understand the dangers that overprescribing this medication can lead to. Lately there has been an increase in antimicrobial resistance due to misprescribing, this has lead to antbiotics becoming less effective on patients that have required treatment. Hence, leading to an increased mortality rate."
 
         elif AntibioticWarning == "0":
-            msg = "INSERT WARNING MESSAGE HERE LATER"
+            msg = "Before being prescribed antibiotics from a GP it is vital that you understand the dangers that overprescribing this medication can lead to. Lately there has been an increase in antimicrobial resistance due to misprescribing, this has lead to antbiotics becoming less effective on patients that have required treatment. Hence, leading to an increased mortality rate."
             
         elif AntibioticWarning == "1":
-            msg = "INSERT EXTENDED WARNING"
+            msg = "Increased antimicrobial resistance is the cause of severe infections, complications, longer hospital stays and increased mortality. Overprescribing of antibiotics is associated with an increased risk of adverse effects, more frequent re-attendance and increased medicalization of self-limiting conditions."
 
         else:
             msg = "Error"
@@ -293,7 +293,7 @@ class ActionAntibioticUse(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        msg = "INSERT FACT ABOUT WHEN IS BEST TO USE ANTIBIOTICS!!!"
+        msg = "Antibiotics are used to treat or prevent some types of bacterial infections. They're not effective against viral infections, such as the common cold or flu. Antibiotics should only be prescribed to treat health problems: that are not serious but are unlikely to clear up without antibiotics – such as acne"
 
         dispatcher.utter_message(text=msg)
 
@@ -309,7 +309,7 @@ class ActionAntibioticUse(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        msg = "INSERT FACT ABOUT THE ALTERNATIVE MEDICATIONS!!!"
+        msg = "If your GP has determined that antibiotics are not required for treatment then there are a number of over the counter medications that can be taken to relieve pain. Ibuprofen and Paracetamol are a great place to start."
 
         dispatcher.utter_message(text=msg)
 
@@ -325,8 +325,22 @@ class ActionAntibioticsideaffects(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        msg = "INSERT FACT ABOUT THE side affects of the MEDICATION!!!"
+        msg = "Antibiotics can have side effects such as diarrhoea and feeling sick. These side effects are usually mild and should pass once you finish your course of treatment. If you get any additional side effects, contact your GP or the doctor in charge of your care for advice."
 
         dispatcher.utter_message(text=msg)
 
         return []
+    
+# class ActionGeneralResponse(Action):
+
+#     def name(self) -> Text:
+#         return "action_general_response"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#         msg = "I'm Sorry, I don't know how to assist you with this issue. Perhaps you can find the answer you're looking for here: https://www.nhs.uk/conditions/antibiotics/"
+#         dispatcher.utter_message(text=msg)
+
+#         return []

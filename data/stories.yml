@@ -99,3 +99,18 @@ stories:
     steps:
       - intent: querySideEffects
       - action: action_antibiotic_sideaffects
+
+  - story: how often to take them
+    steps:
+      - intent: presciptionUse
+      - action: action_follow_doctors_instructions
+
+  - story:
+    steps:
+      - intent: antibiotcTypes
+      - action: utter_antibiotic_types
+
+  - story:
+    steps:
+      - intent: featuresEnquiry
+      - action: utter_features
